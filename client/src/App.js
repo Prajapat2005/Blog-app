@@ -6,8 +6,8 @@ import Home from "./pages/Home";
 import Single from "./pages/Single";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import "bootstrap/dist/css/bootstrap.min.css"
-import "./style.css"
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./style.css";
 
 const Layout = () => {
   return (

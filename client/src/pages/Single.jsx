@@ -55,6 +55,7 @@ const Single = () => {
 
           {post.userImg && <img src={post.userImg} alt="" />}
 
+          {/* right now not in working with logout */}
           <div className="info">
             <span>{post.username}</span>
             <p>Posted {moment(post.date).fromNow()}</p>
