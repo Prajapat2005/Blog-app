@@ -30,6 +30,7 @@ export const addPost = (req, res) => {
   if (!token) return res.status(401).json("Not authenticated!");
 
   jwt.verify(token, "jwtkey", (err, userInfo) => {
+    // (data) userInfo is the object that we store as cookie that is { id: data[0].id }
     if (err) return res.status(403).json("Token is not valid!");
 
     const q =
@@ -58,6 +59,7 @@ export const deletePost = (req, res) => {
   if (!token) return res.status(401).json("Not authenticated!");
 
   jwt.verify(token, "jwtkey", (err, userInfo) => {
+    // (data) userInfo is the object that we store as cookie that is { id: data[0].id }
     if (err) return res.status(403).json("Token is not valid!");
 
     const postId = req.params.id;
